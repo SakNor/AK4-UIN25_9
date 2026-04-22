@@ -3,6 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+<<<<<<< Updated upstream
+=======
+import './components/Header'
+import Header from './components/Header'
+import David from './components/David'
+import Aurora from './components/Aurora'
+>>>>>>> Stashed changes
 
 function App() {
   const [count, setCount] = useState(0)

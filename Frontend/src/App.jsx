@@ -12,6 +12,7 @@ function App() {
     <Header />
     <David />
     <Jenny/>
+    <Aurora/>
     </main>
   )
 }

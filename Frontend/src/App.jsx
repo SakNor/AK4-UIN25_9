@@ -4,6 +4,7 @@ import './components/Header'
 import Header from './components/Header'
 import David from './components/David'
 import Jenny from './components/Jenny'
+import Sakarias from './components/Sakarias'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Header />
     <David />
     <Jenny/>
+    <Sakarias/>
     </main>
   )
 }

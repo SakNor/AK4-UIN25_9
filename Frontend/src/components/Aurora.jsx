@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 export default function Aurora({}){
     const [fetchAuroraSanity, setfetchAuroraSanity]= useState(null)
     useEffect(() => {
-        async function fetchDavidSanity() {
+        async function fetchAuroraSanity() {
           const auroraInfo = await client.fetch("*[_type == 'people' && fullname == 'Aurora Hansen'] {_id, 'imageURL': image.asset->url, fullname, email, course}")
           setfetchAuroraSanity(auroraInfo[0])
         }

@@ -1,6 +1,6 @@
 export default function Arbeidskrav({}){
 
 
-    return (
+    return(
 
 )}

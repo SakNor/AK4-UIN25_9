@@ -1,6 +1,6 @@
 const arbeidskrav = {
-    name: "arbeidskrav",
-    title: "arbeidskrav",
+    name: "Arbeidskrav",
+    title: "Arbeidskrav",
     type: "document",
     fields: [
         {name: "title", title: "Arbeidskrav:", type: "string"},

@@ -4,7 +4,7 @@ const client = createClient({
     projectId: "8q856t79",
     dataset: "production",
     useCdn: true, 
-    apiVersion: "2026-04-22"
+    apiVersion: "2026-04-22",
 })
 
-export default client
+export default client;

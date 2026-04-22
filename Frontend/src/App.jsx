@@ -1,10 +1,10 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import './App.css'
 import './components/Header'
 import Header from './components/Header'
 import David from './components/David'
 import Jenny from './components/Jenny'
-import Sakarias from './components/Sakarias'
+import Aurora from './components/Aurora'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
     <Header />
     <David />
     <Jenny/>
-    <Sakarias/>
+    <Aurora/>
     </main>
   )
 }

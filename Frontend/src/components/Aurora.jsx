@@ -1,25 +1,23 @@
-import { useEffect, useState } from 'react'
-import  client  from '../helpers/client'
+import client from '../helpers/client'
+import { useEffect, useState } from "react"
 
-
-export default function Aurora() {
-    const [auroraData, setAuroraData]= useState(null)
-    
+export default function Aurora({}){
+    const [fetchAuroraSanity, setfetchAuroraSanity]= useState(null)
     useEffect(() => {
-        async function hentAurora() {
-          const auroraInfo = await client.fetch("*[_type == 'personer' && fullt navn == 'Aurora Hansen'] {_id, 'imageURL': image.asset->url, fullname, email, course}")
-          setAuroraData(auroraInfo[0])
+        async function fetchDavidSanity() {
+          const auroraInfo = await client.fetch("*[_type == 'people' && fullname == 'Aurora Hansen'] {_id, 'imageURL': image.asset->url, fullname, email, course}")
+          setfetchAuroraSanity(auroraInfo[0])
         }
-
-        hentAurora()
+        fetchAuroraSanity()
       }, [])
-
-      if (!auroraData) return <p>Laster inn.</p>
-      console.log(auroraData)
+    console.log(fetchAuroraSanity)
 return(
     <article>
-        <h3>Aurora</h3>
+        <h3>{fetchAuroraSanity?.fullname}</h3>
+        <p>{fetchAuroraSanity?.course}</p>
+        <a href={`mailto:${fetchAuroraSanity?.email}`}>{fetchAuroraSanity?.email}</a>
+        <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity.fullname}></img>
     </article>
-
+    
 )
 }

@@ -1,16 +1,25 @@
-import './Aurora.css'
+import { useEffect, useState } from 'react'
+import  client  from '../helpers/client'
 
-function Aurora() {
-    return(
-        <article classname="profil-a">
-            <figure>
-                <img src="/assets/Aurora.png" alt="Illustrasjon av Aurora" />
-            </figure>
-            <section classname="detaljer">
-            <h2>Aurora Hansen</h2>
-            <a href="mailto:aurorah@hiof.no">aurorah@hiof.no</a>
-            <p>Bachelor i Informasjonssytemer.</p>
-            </section>
-        </article>
-    )
+
+export default function Aurora() {
+    const [auroraData, setAuroraData]= useState(null)
+    
+    useEffect(() => {
+        async function hentAurora() {
+          const auroraInfo = await client.fetch("*[_type == 'personer' && fullt navn == 'Aurora Hansen'] {_id, 'imageURL': image.asset->url, fullname, email, course}")
+          setAuroraData(auroraInfo[0])
+        }
+
+        hentAurora()
+      }, [])
+
+      if (!auroraData) return <p>Laster inn.</p>
+      console.log(auroraData)
+return(
+    <article>
+        <h3>Aurora</h3>
+    </article>
+
+)
 }

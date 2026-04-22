@@ -1,3 +1,38 @@
-.Jenny{
-    background-color: brown;
+.Jenny {
+  background: #d4cbcb;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  display: block;
+  text-align: left;
+ 
+}
+
+.Jenny img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.Jenny h2 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: black;
+}
+
+.Jenny p {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.Jenny a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.Jenny a:hover {
+  text-decoration: underline;
 }

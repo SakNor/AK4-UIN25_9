@@ -16,7 +16,7 @@ return(
         <h3>{fetchAuroraSanity?.fullname}</h3>
         <p>{fetchAuroraSanity?.course}</p>
         <a href={`mailto:${fetchAuroraSanity?.email}`}>{fetchAuroraSanity?.email}</a>
-        <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity.fullname}></img>
+        <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity?.fullname}></img>
     </article>
     
 )

@@ -24,5 +24,4 @@ export default function Jenny() {
       <a href={`mailto:${sanityJenny?.email}`}>{sanityJenny?.email}</a>
       
     </article>
-  );
-}
+  )}

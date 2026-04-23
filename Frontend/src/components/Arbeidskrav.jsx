@@ -8,7 +8,7 @@ export default function Arbeidskrav({}){
 const [sanityArbeidskrav, setSanityArbeidskrav]= useState(null)
         useEffect(() => {
         async function fetchArbeidskrav() {
-          const arbeidskravData = await client.fetch("*[_type == 'Arbeidskrav']{_id, title, beskrivelse}")
+          const arbeidskravData = await client.fetch("*[_type == 'Arbeidskrav'] | order(title asc) {_id, title, beskrivelse}")
             setSanityArbeidskrav(arbeidskravData)
         }
         fetchArbeidskrav()

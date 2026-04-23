@@ -110,8 +110,14 @@ code {
   background: var(--code-bg);
 }
 
-section {
+.personerKort {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.Arbeidskrav-card {
+  text-align: left;
+  color: white;
+
 }

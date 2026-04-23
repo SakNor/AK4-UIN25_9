@@ -14,11 +14,9 @@ export default function Aurora({}){
     console.log(fetchAuroraSanity)
 return(
     <article className="Aurora">
-        <h3>{fetchAuroraSanity?.fullname}</h3>
+        <h2>{fetchAuroraSanity?.fullname}</h2>
         <p>{fetchAuroraSanity?.course}</p>
         <a href={`mailto:${fetchAuroraSanity?.email}`}>{fetchAuroraSanity?.email}</a>
         <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity?.fullname}></img>
-    </article>
-    
-)
-}
+    </article>  
+)}

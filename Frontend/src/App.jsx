@@ -13,9 +13,8 @@ function App() {
   <header>
     <Header />
   </header>
-
     <main>
-      <section>
+      <section className="personerKort">
         <David />
         <Jenny/>
         <Aurora/>

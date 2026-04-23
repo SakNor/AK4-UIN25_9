@@ -15,7 +15,7 @@ export default function Sakarias({}){
 
 return(
     <article className='sakariasCSS'>
-        <h3>{fetchSakariasSanity?.fullname}</h3>
+        <h2>{fetchSakariasSanity?.fullname}</h2>
         <p>{fetchSakariasSanity?.course}</p>
         <a href={`mailto:${fetchSakariasSanity?.email}`}>{fetchSakariasSanity?.email}</a>
         <img src={fetchSakariasSanity?.imageURL} alt={fetchSakariasSanity?.fullname}></img>

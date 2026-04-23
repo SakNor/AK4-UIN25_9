@@ -14,11 +14,9 @@ export default function David({}){
     console.log(fetchDavidSanity)
 return(
     <article className='davidKort'>
-        <h3>{fetchDavidSanity?.fullname}</h3>
+        <h2>{fetchDavidSanity?.fullname}</h2>
         <p>{fetchDavidSanity?.course}</p>
         <a href={`mailto:${fetchDavidSanity?.email}`}>{fetchDavidSanity?.email}</a>
         <img src={fetchDavidSanity?.imageURL} alt={fetchDavidSanity?.fullname}></img>
-    </article>
-    
-)
-}
+    </article>    
+)}

@@ -20,8 +20,9 @@ export default function Jenny() {
     <article className="Jenny">
       <h2>{sanityJenny?.fullname}</h2>
       <img src={sanityJenny?.imageURL} alt={sanityJenny?.fullname} />
-      <a href={`mailto:${sanityJenny?.email}`}>{sanityJenny?.email}</a>
       <p>{sanityJenny?.course}</p>
+      <a href={`mailto:${sanityJenny?.email}`}>{sanityJenny?.email}</a>
+      
     </article>
   );
 }

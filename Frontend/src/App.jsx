@@ -5,6 +5,7 @@ import David from './components/David'
 import Jenny from './components/Jenny'
 import Aurora from './components/Aurora'
 import Sakarias from './components/Sakarias'
+import Arbeidskrav from './components/Arbeidskrav'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Aurora/>
         <Sakarias/>
       </section>
+      <Arbeidskrav/>
     </main>
     </>
   )

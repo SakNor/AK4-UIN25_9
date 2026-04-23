@@ -1,5 +1,6 @@
 import client from '../helpers/client'
 import { useEffect, useState } from "react"
+import '../style/david.css'
 
 export default function David({}){
     const [fetchDavidSanity, setfetchDavidSanity]= useState(null)
@@ -12,11 +13,11 @@ export default function David({}){
       }, [])
     console.log(fetchDavidSanity)
 return(
-    <article>
+    <article className='davidKort'>
         <h3>{fetchDavidSanity?.fullname}</h3>
         <p>{fetchDavidSanity?.course}</p>
         <a href={`mailto:${fetchDavidSanity?.email}`}>{fetchDavidSanity?.email}</a>
-        <img src={fetchDavidSanity?.imageURL} alt={fetchDavidSanity.fullname}></img>
+        <img src={fetchDavidSanity?.imageURL} alt={fetchDavidSanity?.fullname}></img>
     </article>
     
 )

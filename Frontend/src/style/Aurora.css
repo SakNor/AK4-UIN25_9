@@ -40,8 +40,8 @@
 .Aurora a {
     font-size: 0.78rem;
     font-weight: 300;
-    color: #555555;
-    text-decoration: none;
+    color: #2e225c;
+    text-decoration: underline;
     letter-spacing: 0.06em;
 
 }
@@ -54,4 +54,5 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     text-align: center;
+    
 }

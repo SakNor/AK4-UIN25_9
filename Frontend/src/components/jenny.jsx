@@ -1,4 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import client from "../helpers/client"
+import '../style/jenny.css'
+
 
 export default function Jenny() {
   
@@ -6,19 +9,19 @@ export default function Jenny() {
 
       useEffect(() => {
         async function fetchJenny() {
-            const sanityJenny = await client.fetch("*[_type == 'people' && name == 'Jenny Vollsund'] {_id,}  imageURL': image.asset->url, name, email, course}")
-            setSanityJenny(sanityJenny)
+          const data = await client.fetch("*[_type == 'people' && fullname == 'Jenny Vollsund']{_id, 'imageURL': image.asset->url, fullname, email, course}")
+            setSanityJenny(data[0])
         }
         fetchJenny()
     }, [])
     console.log(sanityJenny) 
   
   return (
-    <article>
-      <img src={sanityJenny.imageURL} alt={sanityJenny.name} />
-      <h2>{sanityJenny.name}</h2>
-      <p>{sanityJenny.email}</p>
-      <p>{sanityJenny.course}</p>
+    <article className="Jenny">
+      <h2>{sanityJenny?.fullname}</h2>
+      <img src={sanityJenny?.imageURL} alt={sanityJenny?.fullname} />
+      <a href={`mailto:${sanityJenny?.email}`}>{sanityJenny?.email}</a>
+      <p>{sanityJenny?.course}</p>
     </article>
   );
 }

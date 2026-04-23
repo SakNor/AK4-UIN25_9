@@ -1,5 +1,6 @@
 import client from '../helpers/client'
 import { useEffect, useState } from "react"
+import '../style/Aurora.css'
 
 export default function Aurora({}){
     const [fetchAuroraSanity, setfetchAuroraSanity]= useState(null)
@@ -16,7 +17,7 @@ return(
         <h3>{fetchAuroraSanity?.fullname}</h3>
         <p>{fetchAuroraSanity?.course}</p>
         <a href={`mailto:${fetchAuroraSanity?.email}`}>{fetchAuroraSanity?.email}</a>
-        <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity.fullname}></img>
+        <img src={fetchAuroraSanity?.imageURL} alt={fetchAuroraSanity?.fullname}></img>
     </article>
     
 )

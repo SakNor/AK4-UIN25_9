@@ -8,13 +8,20 @@ import Sakarias from './components/Sakarias'
 
 function App() {
   return (
-    <main>
+    <>
+  <header>
     <Header />
-    <David />
-    <Jenny/>
-    <Aurora/>
-    <Sakarias/>
+  </header>
+
+    <main>
+      <section>
+        <David />
+        <Jenny/>
+        <Aurora/>
+        <Sakarias/>
+      </section>
     </main>
+    </>
   )
 }
 

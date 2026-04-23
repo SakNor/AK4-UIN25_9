@@ -14,7 +14,7 @@ export default function Sakarias({}){
     console.log(fetchSakariasSanity)
 
 return(
-    <article>
+    <article className='sakariasCSS'>
         <h3>{fetchSakariasSanity?.fullname}</h3>
         <p>{fetchSakariasSanity?.course}</p>
         <a href={`mailto:${fetchSakariasSanity?.email}`}>{fetchSakariasSanity?.email}</a>

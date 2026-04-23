@@ -1,0 +1,9 @@
+.sakariasCSS {
+display: flex;
+text-align: left;
+align-items: left;
+border-radius: 15px;
+background-color: #FF10F0;
+color: black;
+flex-direction: column-reverse;
+}

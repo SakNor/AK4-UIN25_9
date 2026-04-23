@@ -1,6 +1,6 @@
 import client from '../helpers/client'
 import {useEffect, useState} from 'react'
-import '../style/sakarias.css'
+import '../style/Sakarias.css'
 
 export default function Sakarias({}){
     const [fetchSakariasSanity, setfetchSakariasSanity] = useState(null)
@@ -9,7 +9,7 @@ export default function Sakarias({}){
             const sakariasInfo = await client.fetch("*[_type == 'people' && fullname == 'Sakarias Nordberget'] {_id, 'imageURL': image.asset->url, fullname, email, course}")
             setfetchSakariasSanity(sakariasInfo[0])
         }
-        setfetchSakariasSanity()
+        fetchSakariasSanity()
     }, [])
     console.log(fetchSakariasSanity)
 
@@ -17,8 +17,7 @@ return(
     <article>
         <h3>{fetchSakariasSanity?.fullname}</h3>
         <p>{fetchSakariasSanity?.course}</p>
-        <a href={`mailto:${fetchSakariasSanity?.email}`}>{fetchSakariasSanity}</a>
-        <img src={fetchSakariasSanity?.imageURL} alt={fetchSakariasSanity.fullname}></img>
+        <a href={`mailto:${fetchSakariasSanity?.email}`}>{fetchSakariasSanity?.email}</a>
+        <img src={fetchSakariasSanity?.imageURL} alt={fetchSakariasSanity?.fullname}></img>
     </article>
-
 )}

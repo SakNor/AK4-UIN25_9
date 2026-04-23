@@ -1,5 +1,6 @@
 import client from '../helpers/client'
 import { useEffect, useState } from "react"
+import '../style/Aurora.css'
 
 export default function Aurora({}){
     const [fetchAuroraSanity, setfetchAuroraSanity]= useState(null)
